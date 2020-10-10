@@ -29,10 +29,7 @@ public class PortfolioController {
 
 	@PostMapping("/portfolios/create")
 	public Portfolio createPortfolio(@RequestBody Portfolio portfolio) {
-		System.out.println("passou aqui");
-
 		return repository.save(portfolio);
-
 	}
 	
 	@GetMapping("/portfolio")
@@ -50,4 +47,6 @@ public class PortfolioController {
 	void deletePotfolio(@PathVariable String id) {
 		repository.deleteById(id);
 	}
+	
+	
 }

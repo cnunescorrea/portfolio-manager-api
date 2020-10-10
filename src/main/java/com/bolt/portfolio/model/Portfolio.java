@@ -1,5 +1,7 @@
 package com.bolt.portfolio.model;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 
 public class Portfolio {
@@ -11,12 +13,29 @@ public class Portfolio {
 	
 	String tickerName;
 	
-	Double value;
+	Double currentPrice;
+
+	String stockExchange;
 	
-	Double amount;
+	List<Operation> operations;
 	
-	Double avgCost; 
-	
+
+
+	public String getStockExchange() {
+		return stockExchange;
+	}
+
+	public void setStockExchange(String stockExchange) {
+		this.stockExchange = stockExchange;
+	}
+
+	public List<Operation> getOperations() {
+		return operations;
+	}
+
+	public void setOperations(List<Operation> operations) {
+		this.operations = operations;
+	}
 
 	public String getTicker() {
 		return ticker;
@@ -24,8 +43,8 @@ public class Portfolio {
 
 	public void setTicker(String ticker) {
 		this.ticker = ticker;
-	}
-
+	} 	
+	
 	public String getTickerName() {
 		return tickerName;
 	}
@@ -34,27 +53,13 @@ public class Portfolio {
 		this.tickerName = tickerName;
 	}
 
-	public Double getValue() {
-		return value;
+	public Double getCurrentPrice() {
+		return currentPrice;
 	}
 
-	public void setValue(Double value) {
-		this.value = value;
+	public void setCurrentPrice(Double currentPrice) {
+		this.currentPrice = currentPrice;
 	}
 
-	public Double getAmount() {
-		return amount;
-	}
-
-	public void setAmount(Double amount) {
-		this.amount = amount;
-	}
 	
-	public Double getAvgCost() {
-		return avgCost;
-	}
-
-	public void setAvgCost(Double avgCost) {
-		this.avgCost = avgCost;
-	}
 }
